@@ -3,7 +3,7 @@ def binary(string)
   numbers = string.reverse.split("").collect {|x| x.to_i} 
 
   numbers.each_with_index do |number, index|
-    final_number = (number * 2) ** index
+    final_number += number * (2 ** index)
   end
    final_number
 end
@@ -13,14 +13,13 @@ def trinary(string)
   numbers = string.reverse.split("").collect {|x| x.to_i} 
 
   numbers.each_with_index do |number, index|
-    final_number = (number * 3) ** index
+    final_number += number * (3 ** index)
   end
    final_number
 end
 
 def hexidecimal(string)
   final_number = 0
-  temp_number = 0
   numbers = string.upcase.reverse.split("")
   numbers.each do |number|
     if /[ABCDEF]/.match(number)
@@ -30,6 +29,16 @@ def hexidecimal(string)
   numbers.collect! { |x| x.to_i }
   numbers.each_with_index do |number, index|
     final_number += number * 16 ** index
+  end
+   final_number
+end
+
+def number_convertors(string, base)
+  final_number = 0
+  numbers = string.reverse.split("").collect {|x| x.to_i} 
+
+  numbers.each_with_index do |number, index|
+    final_number += number * (base ** index)
   end
    final_number
 end
