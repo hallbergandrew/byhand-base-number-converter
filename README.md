@@ -1,6 +1,6 @@
-byhand-base-number-converter
+Byhand-base-number-converter
 ============================
 
-Base number converter built in ruby lang using math and not prebuild methods.
+##Base number converter built using the ruby language using math, and not prebuild Ruby methods.
 
-Has methods for base 2-10 and hexidecimals =)
+Has methods for base 2-10 and hexidecimals.
